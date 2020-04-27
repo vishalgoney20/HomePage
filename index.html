@@ -1,7 +1,142 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link href="./style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="./home.js"></script>
+
+  <title>Home Page</title>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h4 class="text-white">Collapsed content</h4>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div align="right">
+        <button class="btn btn-link navigate" onclick="myFunction('home')" id="default" style="text-decoration:none;">Home</button>
+        <button class="btn btn-link navigate" onclick="myFunction('about')" style="text-decoration:none;">About</button>
+        <button class="btn btn-link navigate" onclick="myFunction('contact')" style="text-decoration:none;">Contact</button>
+        <button class="btn btn-link navigate" onclick="myFunction('gallery')" style="text-decoration:none;">Gallery</button>
+
+      </div>
+    </nav>
+  </div>
+
+
+  <section id="home" class="content">
+
+    <div class="imageContainer">
+      <img src="./zemoso.png" alt="zemoso" style="width:100%;">
+      <div class="imageContent">
+        <p><strong>Zero to One Product Innovation for Corporate Incubation & Early stage startups</strong></p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="about" class="content container">
+
+    <br><br>
+    <h4>Introduction</h4>
+    <ul style="list-style-type:none;">
+      <li>
+        <p>I'm <strong> Vishal </strong> working as a trainee at Zemoso technologies</p>
+      </li>
+    </ul>
+
+    <h4>Technical Abilites & Skills</h4>
+    <p>
+      <ul>
+        <li>knowledge of C, C++, Java , Python , HTML , CSS, Spring , Spring Boot ,.... </li>
+        <li>working on React and GraphQL</li>
+      </ul>
+    </p>
+
+    <h4>Certifications</h4>
+    <p>
+      <ul>
+        <li>Machine learning Certification from Coursera </li>
+        <li>Programming through Java from IIT Kharagpur</li>
+        <li>Programming, Data Structures and algorithms using python from IIT Madras</li>
+      </ul>
+    </p>
+
+    <h4>Experience</h4>
+    <ul style="list-style-type:none;">
+      <li>
+        <p>Worked as an intern with <strong><em>Virtusa</em></strong> for 2 months.</p>
+      </li>
+    </ul>
+    <h4>Contact number</h4>
+    <ul style="list-style-type:none;">
+      <li>
+        <strong>9148462358</strong>
+      </li>
+    </ul>
+
+  </section>
+
+
+  <section id="contact" class="content container">
+    <br><br>
+    <h4>Enter below details to get in contact with me...</h4>
+    <br>
+    <div>
+      <form onsubmit=onDetailsSubmit()>
+
+        <input class="form-control mb-4 col-4" type="text" id="first_name" name="firstname" placeholder="First Name"
+          required>
+        <input class="form-control mb-4 col-4" type="text" id="last_name" name="lastname" placeholder="Last Name">
+
+        <input class="form-control mb-4 col-4" type="text" id="email" name="emailAddress"
+          placeholder="Your email details" required>
+
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </form>
+  </section>
+
+
+  <section id="gallery" class="content grid">
+
+    <div class="row">
+      <div class="column">
+        <img src="./zemoso.png" style="width:100%">
+        <img src="./zemoso.png" style="width:100%">
+        <img src="./zemoso.png" style="width:100%">
+      </div>
+
+      <div class="column">
+        <img src="./zemoso.png" style="width:100%">
+        <img src="./zemoso.png" style="width:100%">
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("default").click();
+  </script>
+
 </body>
+
 </html>
